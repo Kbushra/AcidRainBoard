@@ -188,7 +188,7 @@ public class StateManager : BoardManager
                 turn = 1;
                 rainPh--;
                 rain2Ph--;
-                if (rainPh < 0) { rainPh = 0; }
+                if (rainPh < 2) { rainPh = 2; }
                 if (rain2Ph < 0) { rain2Ph = 0; }
                 foreach (TextMeshProUGUI text in collectDisText) { text.text = "None"; }
             }

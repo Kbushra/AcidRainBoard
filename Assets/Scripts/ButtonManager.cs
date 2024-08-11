@@ -49,8 +49,8 @@ public class ButtonManager : MonoBehaviour
         switch((int)curDifficulty)
         {
             case 2:
-                rainPh = 4;
-                rain2Ph = 0;
+                rainPh = 2;
+                rain2Ph = 1;
                 break;
             case 1:
                 rainPh = 5;
@@ -61,7 +61,8 @@ public class ButtonManager : MonoBehaviour
                 rain2Ph = 6;
                 break;
         }
-        turnCount = -(int)curDifficulty + 6;
+        if (curDifficulty == 0) { turnCount = 6; }
+        else { turnCount = 5; }
     }
 
     public void Begin()
