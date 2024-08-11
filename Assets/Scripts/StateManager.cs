@@ -30,11 +30,11 @@ public class StateManager : BoardManager
     public GameObject lightSource;
     private int resultPlayer = 1;
 
-    private string[] answers = new string[14]
+    private readonly string[] answers = new string[12]
     {
-        "KHCO",
-        "NaHCO",
-        "NaHCO",
+        "KHC",
+        "NaOH",
+        "NaCH",
         "CHOK",
         "CHONa",
         "MgSiO",
@@ -43,12 +43,10 @@ public class StateManager : BoardManager
         "NaCO",
         "KPO",
         "NaSiO",
-        "NaClO",
-        "KOH",
-        "NaOH"
+        "NaClO"
     };
-    private int[] phs = new int[14]
-    { 8, 8, 8, 9, 9, 9, 9, 10, 10, 11, 12, 12, 13, 14 };
+    private readonly int[] phs = new int[12]
+    { 8, 8, 8, 9, 9, 9, 9, 10, 10, 11, 12, 12 };
 
     private void Start()
     {
@@ -217,7 +215,6 @@ public class StateManager : BoardManager
                 else { tempPh = rainPh; }
 
                 int val = phs[Array.IndexOf(answers, answer)];
-                if (val >= 13 && tempPh >= 2) { variance = "died"; playerIn[resultPlayer - 1] = false; break; }
                 if (tempPh + val >= 14) { variance = "survived"; } else { variance = "died"; playerIn[resultPlayer - 1] = false; }
                 break;
             }
@@ -340,7 +337,7 @@ public class StateManager : BoardManager
                         for (int i = 0; i < 4; i++)
                         {
                             if (prevent == 1 && i == 3) { break; }
-                            if (prevent == i + 2) { break; }
+                            if (prevent == i + 2) { continue; }
                             if (result != 4 && i == 3) { Instantiate(moveButtonPreset, positions[result - 5], Quaternion.identity); }
                             else { Instantiate(moveButtonPreset, positions[5 * i + result], Quaternion.identity); }
                             Instantiate(moveButtonPreset, positions[6 + 5 * i - result], Quaternion.identity);

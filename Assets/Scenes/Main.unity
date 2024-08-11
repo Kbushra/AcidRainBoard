@@ -3926,37 +3926,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Only one of each element must be collected, hence why numbers are left
-    out of the listing
-
-    - TIP: Rain on the inner board is weaker than rain on
-    the outer, so it is better to retreat inside right before rain (inner board is
-    grey, outer board is green)
-
-
-    POSSIBLE ALKALIS (ignore duplicate letters)
-
-
-    KHCO
-    pH 8            NaCO pH 10
-
-    NaHCO pH 8          KPO pH 11
-
-    NaCHO pH 8         
-    NaSiO pH 12
-
-    CHCOOK pH 9       NaClO pH 12
-
-    CHCOONa pH 9     KOH pH 13*
-
-    MgSiO
-    pH 9            NaOH pH 14*
-
-    MgCO pH 9
-
-    MgOH pH 10
-
-'
+  m_text: "- TIP: Rain on the inner board is weaker than rain on the outer, so it
+    is better to retreat inside right before rain (inner board is grey, outer board
+    is green)\n* Fun fact: Most of these alkalis arent real\n\n\n\nPOSSIBLE ALKALIS
+    (ignore duplicate letters)\n  \nKHC pH 8            MgCO pH 9\nNaOH pH 8         
+    MgOH pH 10\nNaCH pH 8          NaCO pH 10\nCHOK pH 9          KPO pH 11\nCHONa
+    pH 9       NaSiO pH 12\nMgSiO pH 9         NaClO pH 12\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8056,24 +8031,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Rain falls down every 5 turns
+  m_text: '- Rain falls down every few turns
 
-    - Grab the chemicals needed
+    - Grab the chemicals needed to
+    make a compound and survive the rain
 
-    to
-    survive the rain
+    - The pH you get must add up with the
+    pH of the rain to 14 or more
 
-    - The pH you get must add up with the pH of the rain to
-    14 or more
+    - When you choose to collect an element, you
+    MUST use it
 
-    - When you choose to collect an element, you MUST use it
+    - The last person standing wins, else it''s a draw
 
-    -
-    The last person standing wins, or if not the person with highest pH wins, or
-    if not its a draw
-
-    * pH 13 and pH 14 are innaccessible until experienced
-    rain is 1 or 0 pH'
+    - In
+    layman terms, collect stuff, must use all, make other stuff strong enough to
+    survive, then you is win'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
